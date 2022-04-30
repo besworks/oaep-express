@@ -1,0 +1,16 @@
+{
+  "name": "rsa-oaep-keygen",
+  "version": "1.0.0",
+  "description": "API For Generating RSA-OAEP Keypairs",
+  "type": "module",
+  "main": "index",
+  "author": "besworks",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./"
+  },
+  "dependencies": {
+    "@peculiar/webcrypto": "^1.1.7",
+    "express": "^4.17.1"
+  }
+}
