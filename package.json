@@ -1,16 +1,21 @@
 {
   "name": "rsa-oaep-keygen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API For Generating RSA-OAEP Keypairs",
   "type": "module",
   "main": "index",
   "author": "besworks",
   "license": "MIT",
   "scripts": {
-    "start": "node ./"
+    "start": "forever start --append --uid oaep .",
+    "stop": "forever stop oaep",
+    "inspect": "forever --uid oaep list",
+    "watch": "forever --uid oaep logs 0",
+    "test": "node ./"
   },
   "dependencies": {
     "@peculiar/webcrypto": "^1.1.7",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "forever": "^4.0.3"
   }
 }
